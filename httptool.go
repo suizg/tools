@@ -7,7 +7,7 @@ import (
 	"strings"
 )
 
-func httpDo(url string, header map[string]string, httpMethod string, httpPostBody string) []byte {
+func HttpDo(url string, header map[string]string, httpMethod string, httpPostBody string) []byte {
 
 	client := &http.Client{}
 	req, err := http.NewRequest(strings.ToUpper(httpMethod), url, strings.NewReader(httpPostBody))
